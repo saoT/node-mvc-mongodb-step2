@@ -1,11 +1,11 @@
 'use strict';
 
-const db = require('../../database');
+const Products = require('../../database').products;
 
 const products =  {
 
-  find : function (req, res) {
-    db.products.find({name: req.params.name})
+  find : (req, res) => {
+    Products.find({name: req.params.name})
     .then( data => {
       res.send('Operation completed ' + data);
     })
