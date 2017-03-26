@@ -33,7 +33,7 @@ tout comme notre app ne va pas directement chercher dans les fichier .db.
 Il va faire appel à un grossiste qui va les rendre facilement accessibles,
 en les indexant, empaquetant, définissant leurs caractéristiques etc...
 
-![grossiste](readme/products.png)
+![grossiste](readme/product.png)
 
 _(Les failles logiques de cet exemple c’est que c’est aussi le client du restaurant qui va à priori remplir les champs/fermes de produits, et aussi que le restaurateur va voir son grossite à chaque fois qu’on lui commande un plat, mais n’y prêtons pas attention...)_
 
@@ -51,7 +51,7 @@ Et toutes les méthodes annexes qui permettent de protéger ce format.
 
 La distinction la plus difficile à faire est celle entre un model et un controller. Les controllers c’est l'équivalent d'une équipe de cuisine. Il y en a un qui est spécialisé sur les plats, l’autre sur les entrées, le dernier sur les desserts.
 
-<img src="readme/cuisine.png" width="300">
+<img src="readme/cuisine.png" width="500">
 
 Les séparer c’est bien pour l’organisation d’abord parce-qu’il ne vont **pas forcément avoir besoin des mêmes outils**. Mais aussi pour éviter la création de bugs quand mon app grossit.
 SI jamais un jour je veux rajouter/modifier une nouvelle recette de dessert à mon menu, je n’ai **pas besoin de changer l’espace de travail de toute l’équipe** et je n’ai que le cuistot en charge des desserts à former.
@@ -76,7 +76,7 @@ Et un controller comments avec plusieurs methodes. Une des méthode sert à crea
 
 Maintenant on veut pouvoir cliquer sur un produit et afficher une interface avec tout les commentaires sur la boutique qui le vend.
 
-![comments](readme/comments.png)
+<img src="readme/comments.png" width="500">
 
 On va à priori créer une route pour pour pouvoir récupérer toutes ces infos.
 Et cette route va nous renvoyer vers une des méthodes de notre controlleur comments en lui envoyant le product en question.
